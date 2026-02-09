@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiempo diario en Argentina. Clima actual</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" href="https://www.svgrepo.com/show/502423/weather.svg">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Tiempo en Argentina</h1>
+        
+        <div class="controls">
+            <!-- Input Provincia-->
+            <div class="input-group">
+                <label for="provincia">Selecciona una Provincia:</label>
+                <select id="provincia">
+                    <option value=""></option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <!-- Input Ciudad -->
+                <label for="ciudad">Selecciona una Ciudad:</label>
+                <select id="ciudad" disabled>
+                    <option value="">Primero elige una provincia</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">Cargando datos del clima...</div> <!-- Loader -->
+        <div class="error" id="error"></div> <!-- Error al obtener datos -->
+
+        <!-- Grid información del clima -->
+        <div class="weather-data" id="weatherData">
+            <div class="weather-header">
+                <h2 id="cityName"></h2>
+                <div class="temp-main" id="tempMain"></div>
+                <div id="description"></div>
+            </div>
+            <div class="weather-grid" id="weatherGrid"></div>
+        </div>
+    </div>
+
+  <script src="index.js"></script> <!-- JS source -->
+</body>
+</html>
